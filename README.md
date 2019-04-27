@@ -1,6 +1,6 @@
 # microG Installer
 
-This is a Magisk module that install microG GmsCore and DroidGuard Helper to `/system/priv-app`.
+This is a Magisk module that installs microG GmsCore and DroidGuard Helper to `/system/priv-app`.
 
 ## Why you might want to use it?
 
