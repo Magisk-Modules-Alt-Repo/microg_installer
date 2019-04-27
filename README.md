@@ -4,7 +4,7 @@ This is a Magisk module that installs microG GmsCore and DroidGuard Helper to `/
 
 ## Why may you want to use it?
 
-UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps can be wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location.
+UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location.
 
 DroidGuard Helper needs to be installed as a system app in order to pass SafetyNet.
 
