@@ -1,7 +1,25 @@
-# Magisk Installer
+# microG Installer
 
-**Update `README.md` if you want to submit your module to the online repo!**
+This is a Magisk module that install microG GmsCore and DroidGuard Helper to `/system/priv-app`.
 
-For more information about how to use this module installer, please refer to [documentations](https://topjohnwu.github.io/Magisk/guides.html)
+## Why you might want to use it?
 
-If you are not familiar with the Markdown syntax, you can start by experimenting on GitHub's online Markdown editor, which will let you preview before publishing. If you need more help, the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) will be handy.
+UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps can be wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location.
+
+DroidGuard Helper needs to be installed as a system app in order to pass SafetyNet.
+
+Currently, GmsCore v0.2.6.13280 and DroidGuard Helper v0.1.0 are bundled in the module.
+
+__**Note**__: Do not disable this module after installing GMS-dependent apps, unless you know what you're doing.
+
+## Doesn't NanoDroid already fixed the problem?
+
+Yes.
+
+However, NanoDroid is **heavily cluttered** (while they claim to de-bloat your device). A NanoDroid-microG installation with default settings will flood your system with lots of their own included apps, e.g. Nanolx's GmsCore, Play Store, some UnifiedNlp backends. Although this behavior can be altered by creating a kind-of installation settings file, it's just a waste of time for people who want to have a _clean_ and _working_ microG setup with nothing redundant included. It's only suitable for those who want an out-of-the-box experience, or don't want to bother setting up microG manually.
+
+In brief, things seem to be complicated with NanoDroid. Why can't it just install microG and let users decide what to install afterwards?
+
+## Credits
+
+- **The microG project** for their awesome work.

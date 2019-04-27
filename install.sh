@@ -122,9 +122,9 @@ REPLACE="
 # Set what you want to display when installing your module
 
 print_modname() {
-  ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
-  ui_print "*******************************"
+  ui_print "*********************************"
+  ui_print "     microG GmsCore Installer    "
+  ui_print "*********************************"
 }
 
 # Copy/extract your module files into $MODPATH in on_install.
@@ -132,7 +132,7 @@ print_modname() {
 on_install() {
   # The following is the default implementation: extract $ZIPFILE/system to $MODPATH
   # Extend/change the logic to whatever you want
-  ui_print "- Extracting module files"
+  ui_print "- Installing GmsCore & DroidGuard Helper to system"
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
 }
 

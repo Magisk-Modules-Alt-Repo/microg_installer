@@ -1,6 +1,6 @@
-id=template
-name=Template Module
-version=v1
+id=microg_installer
+name=microG Installer
+version=v1.0.0
 versionCode=1
-author=topjohnwu
-description=A short description
+author=Hieu Van
+description=Install microG GmsCore & DroidGuard Helper to /system/priv-app
