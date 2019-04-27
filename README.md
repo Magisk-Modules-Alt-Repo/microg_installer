@@ -10,7 +10,7 @@ DroidGuard Helper needs to be installed as a system app in order to pass SafetyN
 
 Currently, GmsCore v0.2.6.13280 and DroidGuard Helper v0.1.0 are bundled in the module.
 
-__**Note**__: Do not disable this module after installing GMS-dependent apps, unless you know what you're doing.
+**Note**: Do not disable this module after installing GMS-dependent apps, unless you know what you're doing.
 
 ## Doesn't NanoDroid already fix the problem?
 
