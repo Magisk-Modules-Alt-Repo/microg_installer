@@ -22,4 +22,4 @@ In brief, things seem to be complicated with NanoDroid. Why can't it just instal
 
 ## Credits
 
-- **The microG project** for their awesome work.
+- **microG project** for their awesome work.
