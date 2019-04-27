@@ -12,7 +12,7 @@ Currently, GmsCore v0.2.6.13280 and DroidGuard Helper v0.1.0 are bundled in the 
 
 __**Note**__: Do not disable this module after installing GMS-dependent apps, unless you know what you're doing.
 
-## Doesn't NanoDroid already fixed the problem?
+## Doesn't NanoDroid already fix the problem?
 
 Yes.
 
