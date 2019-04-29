@@ -2,7 +2,7 @@
 
 This is a Magisk module that installs microG GmsCore and DroidGuard Helper to `/system/priv-app`.
 
-## Why may you want to use it?
+## Why you may want to use it
 
 UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location.
 
@@ -12,7 +12,7 @@ Currently, GmsCore v0.2.6.13280 and DroidGuard Helper v0.1.0 are bundled in the 
 
 **Note**: Do not disable this module after installing GMS-dependent apps, unless you know what you're doing.
 
-## Doesn't NanoDroid already fix the problem?
+## Doesn't NanoDroid fix the problem?
 
 Yes.
 
