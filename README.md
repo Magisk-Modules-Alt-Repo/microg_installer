@@ -8,7 +8,7 @@ UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't w
 
 DroidGuard Helper needs to be installed as a system app in order to pass SafetyNet.
 
-Currently, GmsCore v0.2.6.13280 and DroidGuard Helper v0.1.0 are bundled in the module.
+Currently, GmsCore v0.2.7.17455 and DroidGuard Helper v0.1.0 are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
@@ -22,4 +22,4 @@ In brief, things seem to be complicated with NanoDroid. Why can't it just instal
 
 ## Credits
 
-- **microG project** for their awesome work.
+- **[microG project](https://microg.org/)** for their awesome work.
