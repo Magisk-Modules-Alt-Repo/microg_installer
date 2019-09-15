@@ -1,0 +1,5 @@
+<!-- microG Installer -->
+<permissions>
+    <privapp-permissions package="com.google.android.gms">
+    </privapp-permissions>
+</permissions>
