@@ -1,12 +1,14 @@
 # microG Installer
 
-This is a Magisk module that installs microG GmsCore and DroidGuard Helper to `/system/priv-app`.
+This is a Magisk module that installs microG GmsCore, GsfProxy and DroidGuard Helper to `/system/priv-app`.
 
 ## Why you may want to use it
 
 UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location.
 
 DroidGuard Helper needs to be installed as a system app in order to pass SafetyNet.
+
+GsfProxy needs to be an system app for some third-party apps.
 
 Currently, GmsCore 0.2.8.17785-mapbox and DroidGuard Helper 0.1.0 are bundled in the module.
 
