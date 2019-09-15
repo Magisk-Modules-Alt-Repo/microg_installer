@@ -2,4 +2,6 @@
 <permissions>
     <privapp-permissions package="com.google.android.gms">
     </privapp-permissions>
+    <privapp-permissions package="org.microg.gms.droidguard">
+    </privapp-permissions>
 </permissions>
