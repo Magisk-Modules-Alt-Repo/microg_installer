@@ -1,4 +1,6 @@
-# microG Installer
+NOTE: This repo was an fork of the original repo that is deleted, so GitHub has chosen another fork as original repo. 
+
+# microG Installer Revived
 
 This is a Magisk module that installs microG GmsCore, GsfProxy and DroidGuard Helper to `/system/priv-app`.
 
@@ -25,3 +27,4 @@ In brief, things seem to be complicated with NanoDroid. Why can't it just instal
 ## Credits
 
 - **microG project** for their awesome work.
+- Hieu Van for the original microG Installer
