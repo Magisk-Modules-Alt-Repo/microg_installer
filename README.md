@@ -36,4 +36,4 @@ Download [this](https://raw.githubusercontent.com/topjohnwu/Magisk/master/script
 ## Credits
 
 - **microG project** for their awesome work.
-- Hieu Van for the original microG Installer
+- **Hieu Van** for the original microG Installer
