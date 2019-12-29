@@ -24,6 +24,15 @@ However, NanoDroid is **heavily cluttered** (while they claim to de-bloat your d
 
 In brief, things seem to be complicated with NanoDroid. Why can't it just install microG and let users decide what to install afterwards?
 
+## Build
+
+### Linux, BSD, macOS, Android
+Requires wget.
+
+    wget -O META-INF/com/google/android/update-binary https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh
+
+### Other
+Download [this](https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh) and put it into `META-INF/com/google/android/update-binary`
 ## Credits
 
 - **microG project** for their awesome work.
