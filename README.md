@@ -24,6 +24,10 @@ However, NanoDroid is **heavily cluttered** (while they claim to de-bloat your d
 
 In brief, things seem to be complicated with NanoDroid. Why can't it just install microG and let users decide what to install afterwards?
 
+## Why is not the newest version of GmsCore included?
+
+To allow updating via F-Droid - it installs a copy to /data and so the app data is safe. Also this is an INSTALLER and not an updater. But if you want you can PR an update if it's not the newest version you include in the PR.
+
 ## Build
 
 ### Linux, BSD, macOS, Android
