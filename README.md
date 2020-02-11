@@ -14,9 +14,14 @@ DroidGuard Helper needs to be installed as a system app in order to pass SafetyN
 
 GsfProxy needs to be an system app for some third-party apps.
 
-Currently, GmsCore 0.2.8.17785-mapbox, GsfProxy 0.1.0 and DroidGuard Helper 0.1.0 are bundled in the module.
+Currently, GmsCore 0.2.10, GsfProxy 0.1.0 and DroidGuard Helper 0.1.0 are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
+
+## Installation
+- Install the module
+- [IMPORTANT] Install the APK from the module (can be downloaded [here](https://github.com/nift4/microg_installer_revived/raw/master/system/priv-app/GmsCore/GmsCore.apk) ) manually.
+- Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
 
 ## Doesn't NanoDroid fix the problem?
 
@@ -25,10 +30,6 @@ Yes.
 However, NanoDroid is **heavily cluttered** (while they claim to de-bloat your device). A NanoDroid-microG installation with default settings will flood your system with lots of their own included apps, e.g. Nanolx's GmsCore, Play Store, some UnifiedNlp backends. Although this behavior can be altered by creating a kind-of installation settings file, it's just a waste of time for people who want to have a _clean_ and _working_ microG setup with nothing redundant included. It's only suitable for those who want an out-of-the-box experience, or don't want to bother setting up microG manually.
 
 In brief, things seem to be complicated with NanoDroid. Why can't it just install microG and let users decide what to install afterwards?
-
-## Why is not the newest version of GmsCore included?
-
-To allow updating via F-Droid - it installs a copy to /data and so the app data is safe. Also this is an INSTALLER and not an updater. But if you want you can PR an update if it's not the newest version you include in the PR.
 
 ## Build
 
