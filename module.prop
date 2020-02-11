@@ -1,6 +1,6 @@
 id=microg_installer
 name=microG Installer Revived
-version=Revived 1.0.0
-versionCode=10
+version=Revived 1.1.0
+versionCode=11
 author=nift4 (prev. Hieu Van)
 description=Install microG GmsCore, GsfProxy & DroidGuard Helper to /system/priv-app
