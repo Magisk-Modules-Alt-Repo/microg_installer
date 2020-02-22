@@ -20,6 +20,7 @@ Currently, GmsCore 0.2.10, GsfProxy 0.1.0 and DroidGuard Helper 0.1.0 are bundle
 
 ## Installation
 - Install the module
+- If you have EdXposed: Look [here](https://github.com/nift4/microg_installer_revived/issues/4)
 - Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
 
 ## Doesn't NanoDroid fix the problem?
