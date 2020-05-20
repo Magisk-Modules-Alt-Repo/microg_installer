@@ -5,6 +5,7 @@
         <permission name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
         <permission name="android.permission.ACCESS_FINE_LOCATION"/>
         <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
         <permission name="android.permission.FAKE_PACKAGE_SIGNATURE"/>
     </privapp-permissions>
     <privapp-permissions package="com.google.android.gsf">
