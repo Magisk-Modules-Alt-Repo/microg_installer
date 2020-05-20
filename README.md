@@ -1,4 +1,4 @@
-NOTE: Now on Magisk repo: https://github.com/Magisk-Modules-Repo/microG_installer
+NOTE: Now on Magisk repo: https://github.com/Magisk-Modules-Repo/microG_installer (this repo has the development version while the magsik repo has the stable version)
 
 NOTE2: This repo was an fork of the original repo (code is [here](https://github.com/nift4/microg_installer/tree/23de13101d8dd5807f713d0cace4a565478c6cfd?files=1)) that is deleted, so GitHub has chosen another fork as original repo. 
 
@@ -14,7 +14,7 @@ DroidGuard Helper needs to be installed as a system app in order to pass SafetyN
 
 GsfProxy needs to be an system app for some third-party apps.
 
-Currently, GmsCore 0.2.10, GsfProxy 0.1.0 and DroidGuard Helper 0.1.0 are bundled in the module.
+Currently, GmsCore 0.2.10, GsfProxy 0.1.0, FakeStore 0.0.2 and DroidGuard Helper 0.1.0 are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
