@@ -28,9 +28,11 @@ Currently, GmsCore 0.2.10, GsfProxy 0.1.0, FakeStore 0.0.2 and DroidGuard Helper
 First, if it is broken, it's microG's fault, not mine :P
 
 **Simple way**
+
 Install the Play Store APK of your choice before installing the module.
 
 **Solid way**
+
 Okay, get an Play Store APK (I suggest the patched Play Store by Nanolx). Then put it into
 
 ```
