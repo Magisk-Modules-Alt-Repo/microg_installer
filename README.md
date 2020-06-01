@@ -14,7 +14,7 @@ DroidGuard Helper needs to be installed as a system app in order to pass SafetyN
 
 GsfProxy needs to be an system app for some third-party apps.
 
-Currently, GmsCore 0.2.10, GsfProxy 0.1.0, FakeStore 0.0.2 and DroidGuard Helper 0.1.0 are bundled in the module.
+Currently, GmsCore 0.2.10, GsfProxy 0.1.0, FakeStore 0.0.2 and DroidGuard Helper 0.1-preview are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
@@ -27,7 +27,7 @@ Currently, GmsCore 0.2.10, GsfProxy 0.1.0, FakeStore 0.0.2 and DroidGuard Helper
 
 First, if it is broken, it's microG's fault, not mine :P
 
-Okay, get an Play Store APK (I suggest the patched Play Store by Nanolx). Then put it into `/data/adb/modules/microg_installer/system/priv-app/Phonesky/` named `Phonesky.apk`. You need to do that after every update... Sorry. Maybe I will handle this better at a later point.
+Okay, get an Play Store APK (I suggest the patched Play Store by Nanolx). Then put it into `/data/adb/modules/microg_installer/system/priv-app/Phonesky/` named `Phonesky.apk`. You need to do that after every module update... Sorry. Maybe I will handle this better at a later point.
 
 ## Doesn't NanoDroid fix the problem?
 
