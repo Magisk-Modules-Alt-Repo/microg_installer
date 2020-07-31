@@ -54,9 +54,9 @@ In brief, things seem to be complicated with NanoDroid. Why can't it just instal
 ### Linux, BSD, macOS, Android
 Requires wget.
 
-    wget -O META-INF/com/google/android/update-binary https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh
+    wget -O META-INF/com/google/android/update-binary https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh && zip microG_Installer_Revived.zip -9r *
 
-And ZIP it.
+
 ### Other
 Download [this](https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh) and put it into `META-INF/com/google/android/update-binary`. And ZIP it.
 ## Credits
