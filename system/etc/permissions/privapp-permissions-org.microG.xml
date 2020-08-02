@@ -6,7 +6,8 @@
         <permission name="android.permission.ACCESS_FINE_LOCATION"/>
         <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
         <permission name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
-        <permission name="android.permission.FAKE_PACKAGE_SIGNATURE"/>
+	<permission name="android.permission.FAKE_PACKAGE_SIGNATURE"/>
+	<permission name="android.permission.UPDATE_APP_OPS_STATS"/>
     </privapp-permissions>
     <privapp-permissions package="com.google.android.gsf">
         <permission name="android.permission.FAKE_PACKAGE_SIGNATURE"/>
