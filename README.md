@@ -1,3 +1,16 @@
+# NOT MAINTAINED ANYMORE
+
+My switching to iOS platform is completely done, so I don't tinker with Android custom roms anymore. There are some ways to install microG to your phone:
+
+1. [microG Installer Revived](https://github.com/Magisk-Modules-Repo/microG_installer)
+If you want to keep systemless and simple microG installation, this is solid choice. It is available in Magisk modules repo.
+
+2. [MinMicroG](https://github.com/FriendlyNeighborhoodShane/MinMicroG)
+Magisk is not required. Simple and easy way to get into microG. Contains some Google proprietary blobs, you will get patched Google Play Store.
+
+3. [LineageOS for microG](https://lineage.microg.org)
+microG integrated ROM. Easiest way to microG experience if you like LineageOS and your device has official LOS build.
+
 # microG Installer
 
 This is a Magisk module that installs microG GmsCore and DroidGuard Helper to `/system/priv-app`.
