@@ -20,18 +20,11 @@ Currently, GmsCore 0.2.13, GsfProxy 0.1.0, FakeStore 0.0.2 and DroidGuard Helper
 
 ## Installation
 - Install the module
-- If you have EdXposed: Look [here](https://github.com/nift4/microg_installer_revived/issues/4)
 - Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
 
 ## How do I get the real Play Store?
 
 First, if it is broken, it's microG's fault, not mine :P
-
-**Simple way**
-
-Install the Play Store APK of your choice before installing the module.
-
-**Solid way**
 
 Okay, get an Play Store APK (I suggest the patched Play Store by Nanolx). Then put it into
 
