@@ -1,0 +1,1 @@
+ls /data/adb/Phonesky.apk && { ui_print "- Installing real Play Store"; cp /data/adb/Phonesky.apk "$MODDIR/system/priv-app/Phonesky/Phonesky.apk" } || ui_print "- Real Play Store not found, installing Fake Store"
