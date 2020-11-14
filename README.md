@@ -1,10 +1,10 @@
-NOTE: Now on Magisk repo: https://github.com/Magisk-Modules-Repo/microG_installer (the [nift4](https://github.com/nift4/microg_installer_revived) repo has the development version (and it's used for pull requests and issues) while the magisk repo has the stable version)
-
-NOTE2: This repo was an fork of the original repo (code is [here](https://github.com/nift4/microg_installer/tree/23de13101d8dd5807f713d0cace4a565478c6cfd?files=1)) that is deleted, so GitHub has chosen another fork as original repo. 
-
 # microG Installer Revived
 
 This is a Magisk module that installs microG GmsCore, GsfProxy and DroidGuard Helper to `/system/priv-app`.
+
+This is originally based on Hieu Van's microG Installer. Because his repository is deleted, GitHub chose another fork of the main repo as original repo. I archived the original code [here](https://github.com/nift4/microg_installer/tree/23de13101d8dd5807f713d0cace4a565478c6cfd?files=1).
+
+There are two copies of this online: The [Magisk module repo](https://github.com/Magisk-Modules-Repo/microG_Installer) and the [personal](https://github.com/nift4/microg_installer) one. The personal one contains the latest development version and is used for pull requests and issues and the Magisk repo one is the stable code.
 
 ## Why you may want to use it
 
@@ -26,13 +26,7 @@ Currently, GmsCore 0.2.13, GsfProxy 0.1.0, FakeStore 0.1.0 and DroidGuard Helper
 
 First, if it is broken, it's microG's fault, not mine :P
 
-Okay, get an Play Store APK (I suggest the patched Play Store by Nanolx). Then put it into
-
-```
-/data/adb/modules/microg_installer/system/priv-app/Phonesky/
-```
-
-named `Phonesky.apk`. You need to do that after every module update... Sorry. Maybe I will handle this better at a later point.
+Okay, get an Play Store APK (I suggest the patched Play Store by Nanolx). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. You can install updates for the Play Store like for every app.
 
 ## Doesn't NanoDroid fix the problem?
 
