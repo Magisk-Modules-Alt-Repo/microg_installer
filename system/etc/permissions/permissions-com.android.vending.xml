@@ -15,6 +15,6 @@
         <!-- Signature spoofing -->
         <permission name="android.permission.FAKE_PACKAGE_SIGNATURE" fixed="false"/>
         <!-- for the real Play Store, as this permission is buggy -->
-        <permission name="android.permission.RECIEVE_SMS" fixed="false"/> 
+        <permission name="android.permission.RECEIVE_SMS" fixed="false"/> 
     </exception>
 </exceptions>

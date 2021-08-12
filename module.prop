@@ -1,6 +1,6 @@
 id=microg_installer
 name=microG Installer Revived
-version=Revived 2.1.0-0
-versionCode=20100
+version=Revived 2.1.0-1
+versionCode=20101
 author=nift4 (prev. maintainer: Hieu Van)
 description=Install microG GmsCore, GsfProxy, FakeStore & DroidGuard Helper to /system/priv-app and MapsV1 to /system/framework
