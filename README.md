@@ -25,9 +25,9 @@ Currently, GmsCore 0.2.21, GsfProxy 0.1.0, FakeStore 0.1.0, DroidGuard Helper 0.
 
 ## How do I get the real Play Store?
 
-First, if it is broken, it's microG's fault, not mine :P
+First, if it is broken, it's probably a microG issue. Feel free to report issues in the bugtracker.
 
-Okay, get an Play Store APK (I suggest the patched Play Store by Nanolx). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. You can install updates for the Play Store like for every app.
+Get an Play Store APK (I suggest the [patched Play Store by Nanolx](https://nanolx.org/fdroid/repo/Phonesky_132.apk)). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. Now grant all permissions. You can now install updates for the Play Store like for every app.
 
 ## Doesn't NanoDroid fix the problem?
 
