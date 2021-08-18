@@ -19,9 +19,10 @@ Currently, GmsCore 0.2.21, GsfProxy 0.1.0, FakeStore 0.1.0, DroidGuard Helper 0.
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
 ## Installation
-- Install the [GmsCore apk](https://github.com/Magisk-Modules-Repo/microG_installer/blob/master/system/priv-app/GmsCore/GmsCore.apk) and grant all permissions
 - Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
 - Install the module
+
+Note: any old workarounds are not needed anymore.
 
 ## How do I get the real Play Store?
 
