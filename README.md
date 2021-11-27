@@ -8,6 +8,8 @@ There are two copies of this online: The [Magisk module repo](https://github.com
 
 ## Why you may want to use it
 
+In short: this is the cleanest option to install microG and just be done with it.
+
 UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location.
 
 DroidGuard Helper needs to be installed as a system app in order to pass SafetyNet.
@@ -22,21 +24,13 @@ Currently, GmsCore 0.2.22, GsfProxy 0.1.0, FakeStore 0.1.0, DroidGuard Helper 0.
 - Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
 - Install the module
 
-Note: any old workarounds are not needed anymore.
+Note: if you do not want any proprietary code installed from this module, please create an file (with any contents) at `/data/adb/no_droid_guard`. This will remove SafetyNet support completely.
 
 ## How do I get the real Play Store?
 
 First, if it is broken, it's probably a microG issue. Feel free to report issues in the bugtracker.
 
 Get an Play Store APK (I suggest the [patched Play Store by Nanolx](https://nanolx.org/fdroid/repo/Phonesky_132.apk)). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. Now grant all permissions. You can now install updates for the Play Store like for every app.
-
-## Doesn't NanoDroid fix the problem?
-
-Yes.
-
-However, NanoDroid is **heavily cluttered** (while they claim to de-bloat your device). A NanoDroid-microG installation with default settings will flood your system with lots of their own included apps, e.g. Nanolx's GmsCore, Play Store, some UnifiedNlp backends. Although this behavior can be altered by creating a kind-of installation settings file, it's just a waste of time for people who want to have a _clean_ and _working_ microG setup with nothing redundant included. It's only suitable for those who want an out-of-the-box experience, or don't want to bother setting up microG manually.
-
-In brief, things seem to be complicated with NanoDroid. Why can't it just install microG and let users decide what to install afterwards?
 
 ## Build
 
