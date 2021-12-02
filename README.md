@@ -6,6 +6,8 @@ This is originally based on Hieu Van's microG Installer. Because his repository 
 
 There are two copies of this online: The [Magisk module repo](https://github.com/Magisk-Modules-Repo/microG_Installer) and the [personal](https://github.com/nift4/microg_installer) one. The personal one contains the latest development version and is used for pull requests and issues and the Magisk repo one is the stable code.
 
+Thanks for 100 stars on the personal repo! Remember, if you have any feature reqest, I missed a microG update or it's not working for you, let me kniw, I'll help/fix/add/update!
+
 ## Why you may want to use it
 
 In short: this is the cleanest option to install microG and just be done with it.
