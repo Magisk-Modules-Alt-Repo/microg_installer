@@ -22,6 +22,7 @@ Currently, GmsCore 0.2.22, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are 
 
 ## Installation
 - Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
+- If your chosen solution is Xposed-only, [install this apk before the module](https://gitlab.com/Nanolx/NanoDroid/-/raw/master/patcher/dexpatcher/org.spoofing.apk)
 - Install the module
 
 ## How do I get the real Play Store?
