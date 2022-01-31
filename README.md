@@ -4,7 +4,7 @@ This is a Magisk module that installs microG GmsCore, GsfProxy and FakeStore (or
 
 This is originally based on Hieu Van's microG Installer. Because his repository is deleted, GitHub chose another fork of the main repo as original repo. I archived the original code [here](https://github.com/nift4/microg_installer/tree/23de13101d8dd5807f713d0cace4a565478c6cfd?files=1).
 
-There are two copies of this online: The [Magisk module repo](https://github.com/Magisk-Modules-Repo/microG_Installer) and the [personal](https://github.com/nift4/microg_installer) one. The personal one contains the latest development version and is used for pull requests and issues and the Magisk repo one is the stable code.
+There are two copies of this online: The [Magisk alt module repo](https://github.com/Magisk-Alt-Modules-Repo/microG_Installer) and the [personal](https://github.com/nift4/microg_installer) one. The personal one contains the latest development version and is used for pull requests and issues and the Magisk repo one is the stable code.
 
 Thanks for 100 stars on the personal repo! Remember, if you have any feature reqest, I missed a microG update or it's not working for you, let me know, I'll help/fix/add/update!
 
@@ -36,7 +36,7 @@ Get an Play Store APK (I suggest the [patched Play Store by Nanolx](https://nano
 ### Linux, BSD, macOS, Android
 Requires wget.
 
-    wget -O META-INF/com/google/android/update-binary https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh && zip microG_Installer_Revived.zip -9r *
+    wget -O META-INF/com/google/android/update-binary https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh && zip microG_Installer_Revived.zip -9r * -x update.json
 
 
 ### Other
