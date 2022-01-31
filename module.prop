@@ -2,6 +2,6 @@ id=microg_installer
 name=microG Installer Revived
 version=Revived 2.4.0-1
 versionCode=24010
-author=nift4 (prev. maintainer: Hieu Van)
+author=nift4
 description=Install microG GmsCore, GsfProxy & FakeStore (or Play Store if you want so) to /system/priv-app and MapsV1 to /system/framework
 updateJson=https://raw.githubusercontent.com/nift4/microg_installer_revived/master/update.json
