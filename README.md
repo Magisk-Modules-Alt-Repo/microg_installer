@@ -16,7 +16,7 @@ UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't w
 
 GsfProxy needs to be an system app for some third-party apps.
 
-Currently, GmsCore 0.2.22, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are bundled in the module.
+Currently, GmsCore 0.2.24, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
