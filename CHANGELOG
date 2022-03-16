@@ -1,3 +1,1 @@
-- Move the apk workaround for xposed-only signature spoofing into the script so users don't have to manually install it
-- Grant FAKE_PACKAGE_SIGNATURE for play store in advance so users don't have to manually do it
-- Drop recovery installation completely
+- Fixes for Play Store on Android 12
