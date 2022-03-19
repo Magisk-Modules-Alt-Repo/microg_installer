@@ -45,3 +45,4 @@ Download [this](https://raw.githubusercontent.com/topjohnwu/Magisk/master/script
 
 - **microG project** for their awesome work.
 - **Hieu Van** for the original microG Installer
+- **Fs00** for many bug fixes
