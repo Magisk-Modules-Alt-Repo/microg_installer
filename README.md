@@ -21,6 +21,7 @@ Currently, GmsCore 0.2.24, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
 ## Installation
+**Again, if you have Google services currently installed, DO NOT INSTALL THIS MODULE.**
 - Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
 - Install the module
 
