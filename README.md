@@ -22,7 +22,7 @@ Currently, GmsCore 0.2.24, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are 
 
 ## Installation
 **Again, if you have Google services currently installed, DO NOT INSTALL THIS MODULE.**
-- Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing)
+- Choose an solution for [Signature spoofing](https://github.com/microg/android_packages_apps_GmsCore/wiki/Signature-Spoofing) (Note: If your ROM does not support signature spoofing, I recommened [my FakeGApps fork](https://github.com/nift4/FakeGApps/releases))
 - Install the module
 
 ## How do I get the real Play Store?
