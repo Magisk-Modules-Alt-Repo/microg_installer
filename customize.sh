@@ -1,13 +1,27 @@
+if [ -n "$MMM_EXT_SUPPORT" ]; then
+  ui_print "#!useExt"
+  mmm_exec() {
+    ui_print "$(echo "#!$@")"
+  }
+else
+  mmm_exec() { true; }
+fi
+
 install_phonesky()
 {
+    mmm_exec showLoading
     pm install --dont-kill "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
     pm grant com.android.vending android.permission.FAKE_PACKAGE_SIGNATURE 2>/dev/null
+    mmm_exec hideLoading
 }
 
 if $BOOTMODE; then
+    mmm_exec setSupportLink "https://github.com/nift4/microg_installer_revived/issues"
 
     ui_print "- Installing microG GmsCore"
+    mmm_exec showLoading
     pm install --dont-kill -g "$MODPATH/system/priv-app/GmsCore/GmsCore.apk"
+    mmm_exec hideLoading
 
     if [ -f /data/adb/Phonesky.apk ]; then
         cp /data/adb/Phonesky.apk "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
