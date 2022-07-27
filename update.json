@@ -1,6 +1,6 @@
 {
-	"version": "Revived 2.6.2-0",
-	"versionCode": 26200,
-	"zipUrl": "https://github.com/nift4/microg_installer_revived/releases/download/v2.6.2-0/microG_Installer_Revived.zip",
-        "changelog": "https://github.com/nift4/microg_installer_revived/raw/v2.6.2-0/CHANGELOG"
+	"version": "Revived 2.6.3-0",
+	"versionCode": 26300,
+	"zipUrl": "https://github.com/nift4/microg_installer_revived/releases/download/v2.6.3-0/microG_Installer_Revived.zip",
+    "changelog": "https://github.com/nift4/microg_installer_revived/raw/v2.6.3-0/CHANGELOG"
 }

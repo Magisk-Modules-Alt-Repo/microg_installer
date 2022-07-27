@@ -1,1 +1,3 @@
-- Bug fixes (by Fs00)
+- Use FoxMMM feature (users of normal Magisk app get nothing new)
+  - Support link
+  - Install progress
