@@ -24,12 +24,12 @@ if $BOOTMODE; then
     mmm_exec hideLoading
 
     if [ -f /data/adb/Phonesky.apk ]; then
+        ui_print "- Installing real Play Store"
         cp /data/adb/Phonesky.apk "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
         # If the real Play Store is already installed, don't install it again since
         # it will result in an error if real Play Store is not patched and has
         # already auto-updated itself
         if [ ! $(pm list packages | grep com.android.vending) ]; then
-            ui_print "- Installing real Play Store"
             install_phonesky
         fi
     else
