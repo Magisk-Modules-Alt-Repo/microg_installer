@@ -1,22 +1,16 @@
 # microG Installer Revived
 
-This is a Magisk module that installs microG GmsCore, GsfProxy and FakeStore (or Play Store if you want so) to `/system/priv-app`.
+This is a Magisk module - originally based on Hieu Van's microG Installer - that installs microG GmsCore, GsfProxy and FakeStore (or Play Store if you want so) to `/system/priv-app`.
 
-This is originally based on Hieu Van's microG Installer. Because his repository is deleted, GitHub chose another fork of the main repo as original repo. I archived the original code [here](https://github.com/nift4/microg_installer/tree/23de13101d8dd5807f713d0cace4a565478c6cfd?files=1).
-
-There are two copies of this online: The [Magisk alt module repo](https://github.com/Magisk-Modules-Alt-Repo/microG_Installer) and the [personal](https://github.com/nift4/microg_installer) one. The personal one contains the latest development version and is used for pull requests and issues and the Magisk repo one is the stable code.
-
-Thanks for 200 stars on the personal repo! Remember, if you have any feature reqest, I missed a microG update or it's not working for you, let me know, I'll help/fix/add/update!
+There are two copies of this online: The [Magisk alt module repo](https://github.com/Magisk-Modules-Alt-Repo/microG_Installer) and the [personal](https://github.com/nift4/microg_installer) one. The personal one contains the latest development version and is used for pull requests and issues and the Magisk alt repo one is the stable code only.
 
 ## Why you may want to use it
 
 In short: this is the cleanest option to install microG and just be done with it.
 
-UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location.
+UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location. Aditionally, this module forces UnifiedNlp support even when no NLP provider is configured in your ROM. And GsfProxy needs to be an system app for some third-party apps.
 
-GsfProxy needs to be an system app for some third-party apps.
-
-Currently, GmsCore 0.2.24, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are bundled in the module.
+Currently, GmsCore 0.2.25, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
@@ -27,7 +21,7 @@ Currently, GmsCore 0.2.24, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are 
 
 ## How do I get the real Play Store?
 
-First, if it is broken, it's probably a microG issue. Feel free to report issues in the bugtracker.
+First, if you experience an bootloop, use [Magisk Safe Mode](https://topjohnwu.github.io/Magisk/faq.html#q-i-installed-a-module-and-it-bootlooped-my-device-help) to disable the module and use an older Play Store APK, then post a bug report. This module needs to be updated for new Play Store versions every while. If it boots, but Play Store is broken, it's probably a microG issue. Feel free to report issues in the bugtracker here though.
 
 Get an Play Store APK (I suggest the [patched Play Store by Nanolx](https://nanolx.org/fdroid/repo/Phonesky_132.apk)). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. Now grant all permissions. You can now install updates for the Play Store like for every app.
 
@@ -42,8 +36,11 @@ Requires wget.
 ### Other
 Download [this](https://raw.githubusercontent.com/topjohnwu/Magisk/master/scripts/module_installer.sh) and put it into `META-INF/com/google/android/update-binary`. And ZIP it.
 
+### About microGOverlay.apk
+This APK file is an simple overlay containing configuration for UnifiedNlp. The source can not be checked in into this git repository because of compatibility reasons with module repositories, so I posted the trivial source code on [an extra branch](https://github.com/nift4/microg_installer_revived/tree/overlay). You can use any signing keystore to sign the overlay, but it needs to be signed.
+
 ## Credits
 
-- **microG project** for their awesome work.
-- **Hieu Van** for the original microG Installer
+- **microG project** for their awesome work
+- **Hieu Van** for the [original microG Installer](https://github.com/nift4/microg_installer_revived/tree/23de13101d8dd5807f713d0cace4a565478c6cfd)
 - **Fs00** for many bug fixes
