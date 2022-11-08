@@ -44,3 +44,5 @@ This APK file is an simple overlay containing configuration for UnifiedNlp. The 
 - **microG project** for their awesome work
 - **Hieu Van** for the [original microG Installer](https://github.com/nift4/microg_installer_revived/tree/23de13101d8dd5807f713d0cace4a565478c6cfd)
 - **Fs00** for many bug fixes
+- **chris42** and **FriendlyNeighborhoodShane** for privapp permission files
+- **felinira**, **akaessens** and **soracqt** for contributing through pull requests
