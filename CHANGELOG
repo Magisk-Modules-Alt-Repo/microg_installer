@@ -1,6 +1,5 @@
-- Fix minimum android version check (thanks ale5000)
-- Uninstall microG and Play Store when uninstalling the module
-- Update microG to v0.2.25
-- Fix network location for many devices by forcing microG as NLP provider
-  - Should significantly improve apps' time required to find location
-- Support VollaOS OEM firmware (replace VollaNlp with microG NLP)
+Merry christmas to everyone who celebrates it! Here's my gift:
+
+Update microG to 0.2.26
+
+Happy new year!
