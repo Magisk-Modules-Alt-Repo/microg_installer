@@ -7,10 +7,30 @@ else
   mmm_exec() { true; }
 fi
 
-install_phonesky()
-{
+pm_install() {
+    which sed >/dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        sessionRaw=$(pm install-create --dont-kill "$1")
+        if [ $? -eq 0 ]; then
+            session=$(echo "$sessionRaw" | sed -E 's/.*\[(.*)\].*/\1/g')
+            if [ $? -eq 0 ]; then
+                pm install-write "$session" "$1"
+                if [ $? -eq 0 ]; then
+                    pm install-commit "$session"
+                    return $?
+                else
+                    pm install-abandon "$session"
+                fi
+            fi
+        fi
+    fi
+    pm install --dont-kill "$1" "$2"
+    return $?
+}
+
+install_phonesky() {
     mmm_exec showLoading
-    pm install --dont-kill "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
+    pm_install "" "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
     pm grant com.android.vending android.permission.FAKE_PACKAGE_SIGNATURE 2>/dev/null
     mmm_exec hideLoading
 }
@@ -20,7 +40,8 @@ if $BOOTMODE; then
 
     ui_print "- Installing microG GmsCore"
     mmm_exec showLoading
-    pm install --dont-kill -g "$MODPATH/system/priv-app/GmsCore/GmsCore.apk"
+    pm_install "-g" "$MODPATH/system/priv-app/GmsCore/GmsCore.apk"
+    pm grant com.google.android.gms android.permission.FAKE_PACKAGE_SIGNATURE 2>/dev/null
     mmm_exec hideLoading
 
     if [ -f /data/adb/Phonesky.apk ]; then
