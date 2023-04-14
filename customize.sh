@@ -8,19 +8,23 @@ else
 fi
 
 pm_install() {
+    tmplocapk=/data/local/tmp/microg_revived_TMP_DELETE_ME.apk
     which sed >/dev/null 2>&1
     if [ $? -eq 0 ]; then
         sessionRaw=$(pm install-create --dont-kill "$1")
         if [ $? -eq 0 ]; then
             session=$(echo "$sessionRaw" | sed -E 's/.*\[(.*)\].*/\1/g')
             if [ $? -eq 0 ]; then
-                pm install-write "$session" "$1"
+                cp "$1" "$tmplocapk"
+                pm install-write "$session" "$tmplocapk"
                 if [ $? -eq 0 ]; then
                     pm install-commit "$session"
-                    return $?
                 else
                     pm install-abandon "$session"
                 fi
+                newretval=$?
+                rm "$tmplocapk"
+                return $newretval
             fi
         fi
     fi
