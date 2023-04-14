@@ -1,1 +1,2 @@
-Update microG to 0.2.27
+- Fix whole Magisk app crashing on certain setups (especially crDroid)
+- Use session-based installer where available (Android 5+?)
