@@ -1,2 +1,2 @@
-- Fix whole Magisk app crashing on certain setups (especially crDroid)
-- Use session-based installer where available (Android 5+?)
+- Fix regression in 3.3.0 by disabling session installer
+- Magisk crashes on certain ROMs (for example crDroid) should still be fixed, if the issue appears again, please let me know
