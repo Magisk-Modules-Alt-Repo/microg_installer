@@ -7,29 +7,35 @@ else
   mmm_exec() { true; }
 fi
 
+session_installer_supported=true
+
 pm_install() {
+    newretval=1
     tmplocapk=/data/local/tmp/microg_revived_TMP_DELETE_ME.apk
-    which sed >/dev/null 2>&1
+    cp "$2" "$tmplocapk"
+    $session_installer_supported && which sed >/dev/null 2>&1
     if [ $? -eq 0 ]; then
         sessionRaw=$(pm install-create --dont-kill "$1")
         if [ $? -eq 0 ]; then
             session=$(echo "$sessionRaw" | sed -E 's/.*\[(.*)\].*/\1/g')
             if [ $? -eq 0 ]; then
-                cp "$1" "$tmplocapk"
                 pm install-write "$session" "$tmplocapk"
                 if [ $? -eq 0 ]; then
                     pm install-commit "$session"
+                    newretval=$?
                 else
                     pm install-abandon "$session"
+                    echo "- SBI fail, please report bug"
                 fi
-                newretval=$?
-                rm "$tmplocapk"
-                return $newretval
             fi
         fi
     fi
-    pm install --dont-kill "$1" "$2"
-    return $?
+    if [ ! $newretval -eq 0 ]; then
+        pm install --dont-kill "$1" "$2"
+        newretval=$?
+    fi
+    rm "$tmplocapk"
+    return $newretval
 }
 
 install_phonesky() {
