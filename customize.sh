@@ -7,7 +7,7 @@ else
   mmm_exec() { true; }
 fi
 
-session_installer_supported=true
+session_installer_supported=false
 
 pm_install() {
     newretval=1
