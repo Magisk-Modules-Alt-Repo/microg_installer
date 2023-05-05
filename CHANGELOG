@@ -1,2 +1,4 @@
-- Fix regression in 3.3.0 by disabling session installer
-- Magisk crashes on certain ROMs (for example crDroid) should still be fixed, if the issue appears again, please let me know
+- Update microG to 0.2.28 & FakeStore to 0.2.0
+- Fix session installer (now enabled by default)
+- Fix real PS not copied early enough
+- Refactor
