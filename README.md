@@ -23,7 +23,7 @@ Currently, GmsCore 0.2.27, GsfProxy 0.1.0, FakeStore 0.1.0 and MapsV1 0.1.0 are 
 
 First, if you experience an bootloop, use [Magisk Safe Mode](https://topjohnwu.github.io/Magisk/faq.html#q-i-installed-a-module-and-it-bootlooped-my-device-help) to disable the module and use an older Play Store APK, then post a bug report. This module needs to be updated for new Play Store versions every while. If it boots, but Play Store is broken, it's probably a microG issue. Feel free to report issues in the bugtracker here though.
 
-Get an Play Store APK (I suggest the [patched Play Store by Nanolx](https://nanolx.org/fdroid/repo/Phonesky_132.apk)). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. Now grant all permissions. You can now install updates for the Play Store like for every app.
+Get an Play Store APK (I suggest unpatched Play Store from APKMirror). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. Now grant all permissions. You can now install updates for the Play Store like for every app.
 
 ## Build
 
