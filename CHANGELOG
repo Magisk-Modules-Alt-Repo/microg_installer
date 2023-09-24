@@ -1,4 +1,2 @@
-- Update microG to 0.2.28 & FakeStore to 0.2.0
-- Fix session installer (now enabled by default)
-- Fix real PS not copied early enough
-- Refactor
+- Update microG to 0.2.29 & FakeStore to 0.2.1
+- Code cleanup & better workaround for framework shooting MagiskManager
