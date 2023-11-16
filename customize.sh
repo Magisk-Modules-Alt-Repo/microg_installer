@@ -15,7 +15,7 @@ if [ -f /data/adb/Phonesky.apk ]; then
     ui_print "- Installing real Play Store"
     cp /data/adb/Phonesky.apk "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
 else
-    ui_print "- Real Play Store not found, installing Fake Store"
+    ui_print "- Real Play Store not found, installing Companion"
 fi
 # If the real Play Store is already installed, don't install it again since
 # it will result in an error if real Play Store is not patched and has
