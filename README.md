@@ -25,6 +25,10 @@ First, if you experience an bootloop, use [Magisk Safe Mode](https://topjohnwu.g
 
 Get an Play Store APK (I suggest unpatched Play Store from APKMirror). Then put it into `/data/adb/` named `Phonesky.apk`(`/data/adb/Phonesky.apk`). You need to do that only once. If you now install, update or reflash microG Installer Revived there will be an message "Installing real Play Store". This indicates it worked. Now grant all permissions. You can now install updates for the Play Store like for every app.
 
+## Can I update to new versions without waiting for module updates?
+
+**Yes**, just download the new APK (in the normal variant, not -hw or -lh) from microG GitHub, download page or microG F-Droid repo (all those use the exact same APK files!) and install it as you always would. If you use Companion, update it this way too. Please note that some F-Droid clients report signature compatibility issues, which however appears to be a problem with interactions between the microG repo, clients and signature spoofing. In this case, download the APKs using a web browser and install them normally.
+
 ## Build
 
 ### Linux, BSD, macOS, Android
