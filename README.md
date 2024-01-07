@@ -29,6 +29,12 @@ Get an Play Store APK (I suggest unpatched Play Store from APKMirror). Then put 
 
 **Yes**, just download the new APK (in the normal variant, not -hw or -lh) from microG GitHub, download page or microG F-Droid repo (all those use the exact same APK files!) and install it as you always would. If you use Companion, update it this way too. Please note that some F-Droid clients report signature compatibility issues, which however appears to be a problem with interactions between the microG repo, clients and signature spoofing. In this case, download the APKs using a web browser and install them normally.
 
+## Common issues
+
+- Magisk crashes while installation: Ignore it and manually reboot
+- microG Companion / real Play Store keeps crashing: Remove it from Magisk Hide / Denylist
+- microG itself keeps crashing: download & install APK as update
+
 ## Build
 
 ### Linux, BSD, macOS, Android
