@@ -26,6 +26,7 @@
     <allow-implicit-broadcast action="com.google.android.c2dm.intent.RECEIVE" />
     <allow-in-power-save package="com.google.android.volta" />
     <allow-in-power-save package="com.google.android.ims" />
+    <allow-in-power-save-except-idle package="com.android.vending" />
     <allow-in-data-usage-save package="com.google.android.ims" />
     <app-link package="com.android.vending" />
     <system-user-whitelisted-app package="com.android.vending" />
