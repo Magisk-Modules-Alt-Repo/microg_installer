@@ -1,1 +1,2 @@
-Update microG (including Companion, previously known as FakeStore) to 0.3.0
+- Fix for real Play Store on Android 14
+- Fix for modern ColorOS/OxygenOS
