@@ -32,8 +32,10 @@ Get an Play Store APK (I suggest unpatched Play Store from APKMirror) - please n
 ## Common issues
 
 - Magisk crashes while installation: Ignore it and manually reboot
-- microG Companion / real Play Store keeps crashing: Remove it from Magisk Hide / Denylist
-- microG itself keeps crashing: download & install APK as update
+- microG Companion / real Play Store keeps crashing: Remove it from Magisk Hide / Denylist / disable KSU Unmount modules
+- black screen / bootloop: don't use Magisk Delta's SuList
+- microG itself keeps crashing: [download](https://github.com/nift4/microg_installer_revived/raw/master/system/priv-app/microG/microG.apk) & install APK as update
+- can't grant background location and SMS permission: [download](https://github.com/nift4/microg_installer_revived/raw/master/system/priv-app/microG/microG.apk) & install APK as update
 
 ## Build
 
