@@ -37,6 +37,7 @@ Get an Play Store APK (I suggest unpatched Play Store from APKMirror) - please n
 - app misbehaves/crashes with missing microg overlay (eg. chromium based browsers): disable KSU Unmount modules from its app profile
 - microG itself keeps crashing: [download](https://github.com/nift4/microg_installer_revived/raw/master/system/priv-app/microG/microG.apk) & install APK as update
 - can't grant background location and SMS permission: [download](https://github.com/nift4/microg_installer_revived/raw/master/system/priv-app/microG/microG.apk) & install APK as update
+- can grant SMS permission but can't grant background location: go to App Info > Permissions > Location > (press "Location access" in the warning dialog), then go back to self test and try to grant background location again - it should now work
 
 ## Build
 
