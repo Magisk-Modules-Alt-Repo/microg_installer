@@ -1,6 +1,6 @@
 # microG Installer Revived
 
-This is a Magisk module - originally based on Hieu Van's microG Installer - that installs microG GmsCore, GsfProxy and FakeStore (or Play Store if you want so) to `/system/priv-app`.
+This is a Magisk module - originally based on Hieu Van's microG Installer - that installs microG GmsCore, GsfProxy and Companion (or Play Store if you want so) to `/system/priv-app`.
 
 There are two copies of this online: The [Magisk alt module repo](https://github.com/Magisk-Modules-Alt-Repo/microG_Installer) and the [personal](https://github.com/nift4/microg_installer) one. The personal one contains the latest development version and is used for pull requests and issues and the Magisk alt repo one is the stable code only.
 
@@ -8,9 +8,9 @@ There are two copies of this online: The [Magisk alt module repo](https://github
 
 In short: this is the cleanest option to install microG and just be done with it.
 
-UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location. Aditionally, this module forces UnifiedNlp support even when no NLP provider is configured in your ROM. And GsfProxy needs to be an system app for some third-party apps.
+UnifiedNlp, which is bundled with GmsCore, if installed as an user app doesn't work on Android 7 and newer without [an additional patch](https://github.com/microg/android_packages_apps_UnifiedNlp/blob/master/patches/android_frameworks_base-N.patch). An another solution to the above problem is to install the app as a privileged system app. However, this way is not perfect, due to those kind of apps being wiped after an OTA update. Therefore, I'm creating this module to help simplify the installation of microG with working network-based location. Aditionally, this module forces UnifiedNlp support even when no NLP provider is configured in your ROM.
 
-Currently, GmsCore 0.3.1 (including Companion, previously known as FakeStore), GsfProxy 0.1.0 and MapsV1 0.1.0 are bundled in the module.
+Currently, GmsCore 0.3.2 (including Companion, previously known as FakeStore), GsfProxy 0.1.0 and MapsV1 0.1.0 are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 

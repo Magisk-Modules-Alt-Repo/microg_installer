@@ -1,7 +1,7 @@
 id=microg_installer
 name=microG Installer Revived
-version=Revived 3.4.3-0
-versionCode=30430
+version=Revived 3.4.4-0
+versionCode=30440
 author=nift4
 description=Install microG GmsCore, Companion (or Play Store if you want so), GsfProxy and MapsV1 to /system/
 updateJson=https://raw.github.com/nift4/microg_installer_revived/master/update.json
