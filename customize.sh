@@ -22,13 +22,16 @@ fi
 mmm_exec showLoading
 ui_print "Collecting information about com.google.android.gms"
 # check microG
-DUMP_GMS="$(pm dump-package com.google.android.gms)"
+DUMP_GMS="$(pm dump com.google.android.gms)"
+if [[ $? -gt 0 ]]; then
+    ui_print "- WARNING: pm dump may have failed?"
+fi
 ui_print "Checking if com.google.android.gms is installed"
 if (echo "$DUMP_GMS" | grep "Unable to find package: com.google.android.gms") >/dev/null; then
     abort "- ERROR: You do not have official microG installed."
 fi
 ui_print "Collecting file path of com.google.android.gms"
-GMS_PATH="$(realpath $(echo "$DUMP_GMS" | grep path: | cut -d: -f2))"
+GMS_PATH="$(realpath $(echo "$DUMP_GMS" | grep path: | head -n1 | cut -d: -f2))"
 ui_print "Checking if file path of com.google.android.gms is on /data"
 if [[ "$GMS_PATH" = "${GMS_PATH#/data/}" ]]; then
     abort "- ERROR: expected microG install path to be on /data, but it's $GMS_PATH"
@@ -49,13 +52,16 @@ if [[ "$GMS_VER" -gt "$MAX_VER" ]]; then
 fi
 # check Vending
 ui_print "Collecting information about com.android.vending"
-DUMP_VD="$(pm dump-package com.android.vending)"
+DUMP_VD="$(pm dump com.android.vending)"
+if [[ $? -gt 0 ]]; then
+    ui_print "- WARNING: pm dump may have failed?"
+fi
 ui_print "Checking if com.android.vending is installed"
 if (echo "$DUMP_VD" | grep "Unable to find package: com.android.vending") >/dev/null; then
     abort "- ERROR: You do not have microG Companion or Play Store installed."
 fi
 ui_print "Collecting file path of com.android.vending"
-VD_PATH="$(realpath $(echo "$DUMP_VD" | grep path: | cut -d: -f2))"
+VD_PATH="$(realpath $(echo "$DUMP_VD" | grep path: | head -n1 | cut -d: -f2))"
 ui_print "Checking if file path of com.android.vending is on /data"
 if [[ "$VD_PATH" = "${VD_PATH#/data/}" ]]; then
     abort "- ERROR: expected microG Companion / Play Store install path to be on /data, but it's $VD_PATH"
