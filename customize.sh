@@ -11,31 +11,68 @@ if ! $BOOTMODE; then
 fi
 mmm_exec setSupportLink "https://github.com/nift4/microg_installer_revived/issues"
 
-if [ -f /data/adb/Phonesky.apk ]; then
-    ui_print "- Installing real Play Store"
-    cp /data/adb/Phonesky.apk "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
-else
-    ui_print "- Real Play Store not found, installing Companion"
-fi
-# If the real Play Store is already installed, don't install it again since
-# it will result in an error if real Play Store is not patched and has
-# already auto-updated itself
-if [ ! $(pm list packages | grep com.android.vending) ]; then
-    mmm_exec showLoading
-    pm install "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
-    mmm_exec hideLoading
-fi
-pm grant com.android.vending android.permission.FAKE_PACKAGE_SIGNATURE 2>/dev/null
+MAX_VER="240913004"
+MAX_VERN="0.3.2.240913"
 
-ui_print "- Installing microG GmsCore"
-# If we install GmsCore update, Magisk Manager will be killed
-# that's because Magisk Manager creates classloader of GmsCore in SSL provider
-# so if GmsCore gets killed, Magisk Manager gets killed by framework as well
-# if we just dont kill GmsCore, it's fine. we use --dont-kill for that
-# however thats only intended for split APKs and google enforced that
-# it stopped working after https://github.com/aosp-mirror/platform_frameworks_base/commit/93c2c2a292ea8695038afdd044bcb51e2e366780
-# keep it here for legacy while i think of a better solution
-# (workaround this by installing gmscore as last step)
+if [ -f /data/adb/Phonesky.apk ]; then
+    ui_print "- INFO: Phonesky.apk is found in /data/adb, but this module no longer uses this file."
+    ui_print "- INFO: It won't break anything, but having that there won't make you use real Play Store anymore."
+fi
+
 mmm_exec showLoading
-pm install --dont-kill -g "$MODPATH/system/priv-app/GmsCore/GmsCore.apk"
+ui_print "Collecting information about com.google.android.gms"
+# check microG
+DUMP_GMS="$(pm dump-package com.google.android.gms)"
+ui_print "Checking if com.google.android.gms is installed"
+if (echo "$DUMP_GMS" | grep "Unable to find package: com.google.android.gms") >/dev/null; then
+    abort "- ERROR: You do not have official microG installed."
+fi
+ui_print "Collecting file path of com.google.android.gms"
+GMS_PATH="$(realpath $(echo "$DUMP_GMS" | grep path: | cut -d: -f2))"
+ui_print "Checking if file path of com.google.android.gms is on /data"
+if [[ "$GMS_PATH" = "${GMS_PATH#/data/}" ]]; then
+    abort "- ERROR: expected microG install path to be on /data, but it's $GMS_PATH"
+fi
+ui_print "Checking if file path of com.google.android.gms exists"
+if ! [[ -f "$GMS_PATH" ]]; then
+    abort "- ERROR: expected microG install path to exist: $GMS_PATH"
+fi
+ui_print "Checking if com.google.android.gms is microG"
+if ! (echo "$DUMP_GMS" | grep "android.permission.FAKE_PACKAGE_SIGNATURE") >/dev/null; then
+    abort "- ERROR: You appear to have Google Play Services installed instead of microG."
+fi
+ui_print "Checking if com.google.android.gms is a supported version"
+GMS_VER="$(echo "$DUMP_GMS" | grep versionCode | head -n1 | cut -d" " -f5 | cut -d= -f2)"
+GMS_VERN="$(echo "$DUMP_GMS" | grep versionName | head -n1 | cut -d" " -f5 | cut -d= -f2)"
+if [[ "$GMS_VER" -gt "$MAX_VER" ]]; then
+    abort "- ERROR: You have microG version $GMS_VERN ($GMS_VER) but the maximum supported version is $MAX_VERN ($MAX_VER)."
+fi
+# check Vending
+ui_print "Collecting information about com.android.vending"
+DUMP_VD="$(pm dump-package com.android.vending)"
+ui_print "Checking if com.android.vending is installed"
+if (echo "$DUMP_VD" | grep "Unable to find package: com.android.vending") >/dev/null; then
+    abort "- ERROR: You do not have microG Companion or Play Store installed."
+fi
+ui_print "Collecting file path of com.android.vending"
+VD_PATH="$(realpath $(echo "$DUMP_VD" | grep path: | cut -d: -f2))"
+ui_print "Checking if file path of com.android.vending is on /data"
+if [[ "$VD_PATH" = "${VD_PATH#/data/}" ]]; then
+    abort "- ERROR: expected microG Companion / Play Store install path to be on /data, but it's $VD_PATH"
+fi
+ui_print "Checking if file path of com.android.vending exists"
+if ! [[ -f "$VD_PATH" ]]; then
+    abort "- ERROR: expected microG Companion / Play Store install path to exist: $VD_PATH"
+fi
+# Do install tasks
+ui_print "- Installing microG GmsCore"
+cp "$GMS_PATH" "$MODPATH/system/priv-app/GmsCore/GmsCore.apk"
+if (echo "$DUMP_VD" | grep "android.permission.FAKE_PACKAGE_SIGNATURE") >/dev/null; then
+  ui_print "- Installing microG Companion"
+  pm grant com.android.vending android.permission.FAKE_PACKAGE_SIGNATURE 2>/dev/null
+  ui_print "Installing microG Companion"
+else
+  ui_print "- Installing Play Store"
+fi
+cp "VD_PATH" "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
 mmm_exec hideLoading

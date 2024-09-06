@@ -1,1 +1,2 @@
-Update microG suite to 0.3.2
+rework install process (see README for details)
+but upgrading should not require manual intervention
