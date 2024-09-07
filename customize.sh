@@ -80,5 +80,5 @@ if (echo "$DUMP_VD" | grep "android.permission.FAKE_PACKAGE_SIGNATURE") >/dev/nu
 else
   ui_print "- Installing Play Store"
 fi
-cp "$VD_PATH" "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
+cp "$VD_PATH" "$MODPATH/system/priv-app/microG/microG.apk"
 mmm_exec hideLoading
