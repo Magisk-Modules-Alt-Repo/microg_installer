@@ -73,10 +73,11 @@ fi
 # Do install tasks
 ui_print "- Installing microG GmsCore"
 if [ -d "/product/priv-app/GmsCore" ]; then
+  mkdir -p "$MODPATH/product/priv-app/GmsCore"
   cp "$GMS_PATH" "$MODPATH/product/priv-app/GmsCore/GmsCore.apk"
   rm -f "$MODPATH/system/priv-app/GmsCore/GmsCore.apk"
 else
-  rm -f "$MODPATH/product/priv-app/GmsCore/GmsCore.apk"
+  rm -rf "$MODPATH/product/priv-app/GmsCore/"
   cp "$GMS_PATH" "$MODPATH/system/priv-app/microG/microG.apk"
 fi
 if (echo "$DUMP_VD" | grep "android.permission.FAKE_PACKAGE_SIGNATURE") >/dev/null; then
@@ -87,10 +88,11 @@ else
   ui_print "- Installing Play Store"
 fi
 if [ -d "/product/priv-app/Phonesky" ]; then
+  mkdir -p "$MODPATH/product/priv-app/Phonesky"
   cp "$VD_PATH" "$MODPATH/product/priv-app/Phonesky/Phonesky.apk"
   rm -f "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
 else
   cp "$VD_PATH" "$MODPATH/system/priv-app/Phonesky/Phonesky.apk"
-  rm -f "$MODPATH/product/priv-app/Phonesky/Phonesky.apk"
+  rm -rf "$MODPATH/product/priv-app/Phonesky/"
 fi
 mmm_exec hideLoading
