@@ -31,6 +31,7 @@ Note: previously, this module told you to put it into `/data/adb/Phonesky.apk`. 
 - black screen / bootloop: don't use Magisk Delta's SuList
 - app misbehaves/crashes with missing microg overlay (eg. chromium based browsers): disable KSU Unmount modules from its app profile
 - can grant SMS permission but can't grant background location: go to App Info > Permissions > Location > (press "Location access" in the warning dialog), then go back to self test and try to grant background location again - it should now work
+- real Play Store error DF-DFERH-01: make sure you have Device Registration enabled in microG settings, and make sure Internet access is enabled for Play Store and microG (some custom ROMs have a toggle in App info)
 
 ## Build
 
