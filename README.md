@@ -1,3 +1,5 @@
+## This project is in reduced maintenance / no support mode and I will only release updates for my personal usage from now on. There are too many issues with KernelSU, stock ROMs and everything too far from my personal usecase, and I'd rather use my free time with other projects, so I am not really able (or motivated) to support most cases anymore. If you can, use recovery-based installers, those will always be more reliable and universal.
+
 # microG Installer Revived
 
 This is a Magisk module - originally based on Hieu Van's microG Installer - that installs microG GmsCore, GsfProxy and Companion (or Play Store if you want so) to `/system/priv-app`.
