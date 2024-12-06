@@ -4,7 +4,7 @@
 
 This is a Magisk module - originally based on Hieu Van's microG Installer - that installs microG GmsCore, GsfProxy and Companion (or Play Store if you want so) to `/system/priv-app`.
 
-Currently, GmsCore 0.3.2 (including Companion, previously known as FakeStore) and earlier are supported. GsfProxy 0.1.0 and MapsV1 0.1.0 are bundled in the module.
+Currently, GmsCore 0.3.4 (including Companion, previously known as FakeStore) and earlier are supported. GsfProxy 0.1.0 and MapsV1 0.1.0 are bundled in the module.
 
 **Note**: Install this module before installing any GMS-dependent apps, as well as do not disable it after installing such apps, unless you know what you're doing.
 
